@@ -1,0 +1,20 @@
+li {
+   display: flex !important;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+
+.list-group-item {
+   width: 700px;
+   height: 50px;
+   border: black solid 1px;
+   padding: 5px;
+   font-size: 14px;
+}
+
+.purple {
+   border: black solid thin;
+   color: white;
+   background: #b389c5;
+}

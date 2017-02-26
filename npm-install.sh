@@ -23,6 +23,9 @@ npm install -D style-loader css-loader postcss-loader
 npm install -D react-css-modules postcss-modules
 npm install -D postcss-cssnext precss postcss-scss
 
+# react story board support
+npm install -D @kadira/storybook @kadira/react-storybook-addon-info
+
 # install utilities
 npm install -S axios classnames ramda
 
@@ -32,7 +35,5 @@ npm install -S react-bootstrap bootstrap react-router-redux react-router-bootstr
 npm install -S react-icons
 npm install -S gsap react-addons-transition-group react-addons-gsap-transition-group react-gsap-enhancer
 
-# react story board support
-npm install -D @kadira/storybook @kadira/react-storybook-addon-info
-
-
+# for fake text
+npm install -S faker
