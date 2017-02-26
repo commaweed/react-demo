@@ -24,7 +24,7 @@ const styleLoader = {
 };
 
 const scssLoader = {
-   loader: 'scss-loader',
+   loader: 'css-loader',
    options: {
       modules: true,
       importLoader: 1,
@@ -54,12 +54,13 @@ const postcssLoader = {
 
 // the configuration
 module.exports = {
-   devtool: appProperties.isDebug ? "inline-sourcemap" : false, // inline-sourcemap eval-source-map
+   devtool: appProperties.isDebug ? "inline-source-map" : false, // inline-source-map source-map eval eval-source-map
    context: appProperties.inputBaseDir,
    entry: appProperties.appFile,
    output: {
       path: appProperties.outputBaseDir,
-      filename: appProperties.appName + '.bundle.js'
+      filename: appProperties.appName + '.bundle.js',
+      devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]',
    },
    module: {
       rules: [
@@ -68,13 +69,13 @@ module.exports = {
             loader: 'babel-loader',
             options: {
                presets: [
-                  'react', 'es2015'
+                  'es2015', 'react'
                ],
                plugins: [
                   'react-html-attrs',
                   'transform-class-properties',
                   'transform-decorators-legacy'
-               ],
+               ]
             },
             include: appProperties.inputBaseDir
          }, {
@@ -87,7 +88,7 @@ module.exports = {
                   publicPath: appProperties.outputDirName
                })
          }, {
-            test: /\.scss/i,
+            test: /\.scss$/i,
             use: appProperties.isDebug
                ? [ styleLoader, scssLoader, postcssLoader ]
                : ExtractTextPlugin.extract({
@@ -138,7 +139,7 @@ module.exports = {
          comments: appProperties.isDebug,
          compress: !appProperties.isDebug,
          mangle: !appProperties.isDebug,
-         sourcemap: appProperties.isDebug
+         sourceMap: appProperties.isDebug
       }),
       new OptimizeCssAssetsPlugin({
          assetNameRegExp: /\.s?css$/g,

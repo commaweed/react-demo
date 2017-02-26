@@ -30,6 +30,7 @@ npm install -S axios classnames ramda
 npm install -S react react-dom react-router react-redux redux
 npm install -S react-bootstrap bootstrap react-router-redux react-router-bootstrap
 npm install -S react-icons
+npm install -S gsap react-addons-transition-group react-addons-gsap-transition-group react-gsap-enhancer
 
 # react story board support
 npm install -D @kadira/storybook @kadira/react-storybook-addon-info

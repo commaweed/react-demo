@@ -1,8 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap.css';
+
+import AnimatedBoxes from './components/AnimatedBoxes';
+
+const testAnimatedBoxes = (
+  <AnimatedBoxes/>
+);
 
 ReactDOM.render(
-   <h1>hello world</h1>
-, document.getElementById('app'));
+   testAnimatedBoxes
+   , document.getElementById('app')
+);

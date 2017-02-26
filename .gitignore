@@ -1,6 +1,9 @@
 node_modules/
 dist/
 tj-react.iml
-stories/
+
 .idea/
+
 .storybook/
+stories/
+storybook-static/
