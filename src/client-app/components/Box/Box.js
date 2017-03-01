@@ -6,6 +6,6 @@ class Box extends Component {
          <div styleName="box"></div>
       );
    }
-};
+}
 
 export { Box };

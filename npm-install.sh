@@ -37,3 +37,6 @@ npm install -S gsap react-addons-transition-group react-addons-gsap-transition-g
 
 # for fake text
 npm install -S faker
+
+# css themes
+npm install -S react-css-themr
