@@ -7,14 +7,12 @@ class ListItem extends Component {
       super(props);
    }
 
-   componentWillMount(quote, index) {
-      console.log('mounted');
+   componentDidMount(quote, index) {
       this.addAnimation(this.mountAnimation);
    }
 
    mountAnimation({ target, options }) {
-      console.log('mountAnimation');
-      return TweenMax.fromTo(target, 3, {
+      return TweenMax.fromTo(target, .3, {
          x: '+=50',
          opacity: 0
       }, {
@@ -24,13 +22,14 @@ class ListItem extends Component {
    }
 
    unmountAnimation({ target, options }) {
-      console.log('unmountAnimation');
-      return TweenMax.fromTo(target, 3, {
+      return TweenMax.fromTo(target, .3, {
          x: '+=0',
          opacity: 1
       }, {
          x: '-=50',
-         opacity: 0
+         opacity: 0,
+         clearProps: 'all',
+         onComplete: () => {  options.onRemoveClick(options.data) }
       });
    }
 
@@ -41,20 +40,7 @@ class ListItem extends Component {
       } = this.props;
 
       let handleButtonClick = () => {
-         console.log('remove button clicked');
-
-         this.addAnimation((target, options) => {
-            console.log('remove animation', target);
-            return TweenMax.fromTo(target, 0.3, {
-               x: '+=0',
-               opacity: 1
-            }, {
-               x: '-=50',
-               opacity: 0
-            });
-         });
-
-         this.props.onRemoveClick();
+         this.addAnimation(this.unmountAnimation, this.props);
       };
 
       return (

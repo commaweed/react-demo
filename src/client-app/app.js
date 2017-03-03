@@ -23,6 +23,6 @@ const testBoxPanel = (
 );
 
 ReactDOM.render(
-   testBoxPanel
+   testAnimatedList
    , document.getElementById('app')
 );
