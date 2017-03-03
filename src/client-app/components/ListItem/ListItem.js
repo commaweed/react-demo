@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { TweenMax, TimelineMax }  from 'gsap';
+import { TweenMax }  from 'gsap';
 
 class ListItem extends Component {
 

@@ -16,7 +16,7 @@ class LoadMask extends Component {
       } = this.props;
 
       return (
-         <div id="loader" styleName="container" >
+         <div id="loader" class="container" >
 
          </div>
 

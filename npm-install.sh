@@ -40,3 +40,6 @@ npm install -S faker
 
 # css themes
 npm install -S react-css-themr
+
+# vector graphics API
+npm install -S raphael

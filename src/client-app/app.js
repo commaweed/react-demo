@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 //import 'bootstrap/dist/css/bootstrap.css';
+import './app.css'
 
 import AnimatedBoxes from './components/AnimatedBoxes';
 import AnimatedItemList from './components/AnimatedItemList';
 import BoxPanel from './components/BoxPanel';
+import Logo from './components/Logo';
 
 const testAnimatedBoxes = (
   <AnimatedBoxes/>
@@ -22,7 +24,13 @@ const testBoxPanel = (
    </BoxPanel>
 );
 
+const testLogo = (
+   <BoxPanel width="auto" height="auto">
+      <Logo/>
+   </BoxPanel>
+);
+
 ReactDOM.render(
-   testAnimatedList
+   testLogo
    , document.getElementById('app')
 );
