@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-//import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './app.css'
 
 import AnimatedBoxes from './components/AnimatedBoxes';
 import AnimatedItemList from './components/AnimatedItemList';
 import BoxPanel from './components/BoxPanel';
 import Logo from './components/Logo';
+
+import HomePage from './views/HomePage';
 
 const testAnimatedBoxes = (
   <AnimatedBoxes/>
@@ -17,20 +19,17 @@ const testAnimatedList = (
    <AnimatedItemList/>
 );
 
-const testBoxPanel = (
-   <BoxPanel width="200" height="300">
-      <h3>Yo!!!</h3>
-      <h4>Son!!</h4>
-   </BoxPanel>
-);
-
 const testLogo = (
-   <BoxPanel width="auto" height="auto">
+   <BoxPanel customStyles={{ width: "auto", height: "auto", padding: "10px", margin: "5px" }} >
       <Logo/>
    </BoxPanel>
 );
 
+const testHomePage = (
+   <HomePage/>
+);
+
 ReactDOM.render(
-   testLogo
+   testHomePage
    , document.getElementById('app')
 );

@@ -7,3 +7,6 @@ tj-react.iml
 .storybook/
 stories/
 storybook-static/
+
+npm-debug.log
+
