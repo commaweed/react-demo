@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Faker from 'faker';
-import _ from 'ramda';
+import { without } from 'ramda';
 import ListItem from '../ListItem';
 
 class AnimatedItemList extends Component {
@@ -23,7 +23,7 @@ class AnimatedItemList extends Component {
 
    handleRemoveClick(quote) {
       this.setState({
-         quotes: _.without(quote, this.state.quotes)
+         quotes: without(quote, this.state.quotes)
       });
    }
 

@@ -10,6 +10,7 @@ import BoxPanel from './components/BoxPanel';
 import Logo from './components/Logo';
 
 import HomePage from './views/HomePage';
+import TopNavBar from './views/TopNavBar';
 
 const testAnimatedBoxes = (
   <AnimatedBoxes/>
@@ -27,6 +28,11 @@ const testLogo = (
 
 const testHomePage = (
    <HomePage/>
+);
+
+ReactDOM.render(
+   <TopNavBar/>
+   , document.getElementById('navbar')
 );
 
 ReactDOM.render(

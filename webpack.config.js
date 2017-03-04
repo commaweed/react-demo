@@ -59,8 +59,8 @@ module.exports = {
    entry: appProperties.appFile,
    output: {
       path: appProperties.outputBaseDir,
-      filename: appProperties.appName + '.bundle.js',
-      devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]',
+      filename: appProperties.appName + '.bundle.js'
+      //,devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
    },
    module: {
       rules: [
@@ -142,7 +142,7 @@ module.exports = {
          sourceMap: appProperties.isDebug
       }),
       new OptimizeCssAssetsPlugin({
-         assetNameRegExp: /\.s?css$/g,
+         assetNameRegExp: /\.scss$/g,
          cssProcessor: require('cssnano'),
          cssProcessorOptions: {
             discardComments: {
